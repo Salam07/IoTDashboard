@@ -43,12 +43,12 @@ void callback(String topic, byte* message, unsigned int length) {
   }
 
   if(topic=="room/light"){
-    if (messagein == "ON") 
+    if (messagein == true) 
       digitalWrite(LED, HIGH);
       Serial.println("Light is ON");
     if (messagein == "OFF") 
       digitalWrite(LED, LOW);
-      Serial.println("Light is ON");
+      Serial.println("Light is OFF");
   }
 }
 
